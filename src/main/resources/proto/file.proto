@@ -1,0 +1,9 @@
+syntax = "proto3";
+package proto;
+option java_package = "cn.sunline.proto";
+
+message file {
+    string filename = 1;
+    uint32 size = 2;
+    bytes data = 3;
+}

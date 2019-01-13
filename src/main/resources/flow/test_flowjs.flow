@@ -1,0 +1,14 @@
+<flows>
+	<flow id="1" name="script" in="true">
+			log.info("start...");
+			return 110;
+	</flow>
+			
+	<flow id="110" name="view">
+	{		"get":jd.get(),
+		"get2":jd.get2(),
+		"msg":"展示自定义flowjs的使用23"
+			}
+	</flow>
+	
+</flows>

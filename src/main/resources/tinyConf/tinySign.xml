@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiny>
+    <url method="all">test_sign</url>
+    <url method="all">test_sign2</url>
+    <url method="all">test_sign3</url>
+</tiny>

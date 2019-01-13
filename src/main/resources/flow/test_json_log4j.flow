@@ -1,0 +1,20 @@
+<flows>
+	<flow id="1" name="script" in="true" desc="log4j的json格式化">
+		log.debug("start...");
+	    pri.j = [
+		    {
+		        "password":"123456"
+		    }
+		];
+		log.debug( "jsons:"+JSON.stringify(pri.j) );		
+		return 10;
+	</flow>
+
+	<flow id="10" name="view">
+		{
+			"code":"00001",
+			"msg":"log4j日志json格式化"
+		}
+	</flow>
+	
+</flows>

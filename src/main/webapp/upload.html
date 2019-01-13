@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<form action="test_upload.tml" method="post" enctype="multipart/form-data">
+<input type="file" name="img" id="imgfile" />
+<a href="javascript:test()">异步上传</a>
+<input type="submit" value="表单提交">
+</form>
+<img  src=""/>
+<script>
+	function test(){
+		var formData = new FormData();
+						// formData.ppend(name, element);
+						formData.append('img',
+								$('#imgfile')[0].files[0]);
+		$.ajax({
+							url : 'test_upload.tml',
+							method : 'POST',
+							data : formData,
+							dataType : 'json',
+							contentType : false, // 注意这里应设为false
+							processData : false,
+							cache : false,
+							success : function(data) {
+								console.log(data);
+								alert(data.msg);
+							},
+							error : function(jqXHR) {
+								console.log(JSON.stringify(jqXHR));
+							}
+						}).done(function(data) {
+							console.log('done');
+						}).fail(function(data) {
+							console.log('fail');
+						}).always(function(data) {
+							console.log('always');
+						});
+	}
+</script>
+
+</body>
+</html>

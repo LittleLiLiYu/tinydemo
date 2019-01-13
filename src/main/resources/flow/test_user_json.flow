@@ -1,0 +1,26 @@
+<flows>
+ <flow id="1" name="script" in="true" type="pub.userInfo.appointment_id:JSONArray">
+	 var r = {};
+	 r.status=[];
+	 r.status.add("1");
+	 
+	 log.debug("---"+r.status);
+	 
+	 pub.userInfo={
+		  "email" : "bdb@123.com",
+		  "mobile" : "8977949494",
+		  "user_status" : [
+		    "OPACLA01"
+		  ],
+		  "appointment_id" : [
+		    "8be690fd-6b4f-41ba-a9c9-403a8a7e0df5"
+		  ]
+	 };
+
+	log.debug("1111"+pub.userInfo.appointment_id.get(0) );
+	
+	 pri.view = pub.userInfo;
+	 
+</flow>
+ 
+</flows>

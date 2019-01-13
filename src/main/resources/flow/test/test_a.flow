@@ -1,0 +1,17 @@
+<flows>
+	<flow id="1" name="script" in="true" desc="接收信息和非空校验">
+		log.debug("pri:"+pri);
+		log.debug("pub:"+pub);
+		
+	
+		return secrchUser;
+	</flow>
+	<flow id="secrchUser" name="view"  desc="从数据库查询用户信息">
+		
+		{
+            code:"111"
+        }
+	</flow>
+	
+
+</flows>

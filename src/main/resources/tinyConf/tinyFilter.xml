@@ -1,0 +1,10 @@
+<tiny>
+    <filter type="tml">tmlServerSessionTimeOutFilter</filter>
+    
+     <filter type="tml">xssFilter</filter>
+     <filter type="tml">sqlFilter</filter>
+     
+		<filter type="tml">signFilter</filter>
+        <!--     <filter type="tml">checkFilter</filter> -->
+    <!--  <filter type="tml">signFilter</filter>-->
+</tiny>

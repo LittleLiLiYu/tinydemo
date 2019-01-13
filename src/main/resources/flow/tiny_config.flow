@@ -1,0 +1,15 @@
+<flows>
+	<flow id="1" name="script" in="true">
+			log.info("start...");
+			return 100;
+	</flow>
+	
+			
+	<flow id="100" name="view">
+	{
+		"name":config.getValue("data.name"),
+		"name2":config.getValue("data.name2")
+	}
+	</flow>
+	
+</flows>

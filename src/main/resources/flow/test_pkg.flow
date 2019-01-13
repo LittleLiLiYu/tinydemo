@@ -1,0 +1,11 @@
+<flows>
+	
+	<flow id="1" name="script" in="true">
+			
+			pri.mobile = "1234567";
+			pri.num = 100;
+		
+	</flow>
+	
+	
+</flows>

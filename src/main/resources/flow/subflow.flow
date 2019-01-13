@@ -1,0 +1,17 @@
+<flows>
+	<flow id="1" name="script" in="true">
+			pri.c =2;
+			return 2;
+	</flow>
+	
+	<flow id="2" name="subflow" succ="3">
+		<p name="flow2"/>
+		<p id="1" />
+	</flow>
+	
+	<flow id="3" name="script">
+		pri.b= pri.a;
+	</flow>
+	
+
+</flows>

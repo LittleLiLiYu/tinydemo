@@ -1,0 +1,44 @@
+<flows>
+	
+	<flow id="1" name="script" in="true">
+			
+			pri.mobile = "1234567";
+			pri.num = 100;
+			return 10;
+	</flow>
+	
+	<flow id="10" name="pubSet" succ="15">
+		<p name="mobile" value="pri.mobile" />
+		<p name="page.num1" value="pri.num" />
+		<p name="page.num2" value="pri.num" />
+	</flow>
+	
+	<flow id="15" name="script" >
+			log.debug("set:"+pub);
+			return 20;
+	</flow>
+	
+	<flow id="20" name="pubClear" succ="30">
+		<p name="mobile"  />
+		<p name="page.num1" />
+	</flow>
+	
+	<flow id="30" name="script" >
+			log.debug("clear:"+pub);
+			return 110;
+	</flow>
+			
+	<flow id="110" name="view">
+	{
+		"msg":"展示pubClear和pubSet组件"
+	}
+	</flow>
+	
+	
+	
+	<flow id="1000" name="script" in="true">
+			
+		return 10;
+	</flow>
+	
+</flows>

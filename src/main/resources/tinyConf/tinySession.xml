@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tiny>
+    <url method="all">index</url>
+    <url method="all">sql_jsons</url>
+    <url method="all">login_proto</url>
+    <url method="all">person_proto</url>
+</tiny>

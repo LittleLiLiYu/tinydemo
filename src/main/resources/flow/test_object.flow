@@ -1,0 +1,31 @@
+<flows>
+	/**
+	* 内最对象的使用
+	*
+	*/
+	<flow id="1" name="script" in="true">
+			log.info("info-start...");
+			log.debug("debug-start..");
+			
+			log.debug( "config.data.name:"+config.getValue("data.name") );
+			log.debug( "config.debug:"+config.getValue("debug"));
+			
+			
+			log.debug( "util.md5加密:"+util.md5("123456"));
+			log.debug( "util.getNowDate:"+util.now("yyyyy-MM-dd"));
+			
+			return 110;
+	</flow>
+			
+	<flow id="110" name="view">
+	{		"msg":"展示内置的对象和方法"
+		,"log.info":"log.info(str)"
+		,"log.debug":"log.debug(str)"
+		,"config":"config.getValue(key)"
+		,"check":"check包含常用的验证方法"
+		,"util":"util包含常用的工具类方法"
+		
+	}
+	</flow>
+	
+</flows>

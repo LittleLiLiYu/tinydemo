@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>tinydemo2</artifactId>
+	<packaging>war</packaging>
+	<name>tinydemo</name>
+	<url>http://maven.apache.org</url>
+	
+	<parent>
+		<groupId>cn.sunline.tiny</groupId>
+		<artifactId>tiny-boot-starter-one-parent</artifactId>
+		<version>2.1.0-SNAPSHOT</version>
+	</parent>
+	
+	<properties>
+	  <tomcat.version>8.5.17</tomcat.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>sunline-tiny</id>
+			<name>sunline</name>
+			<url>http://p.mtiny.cn:8099/repository/maven-snapshots/</url>
+		</repository>
+	</repositories>
+	
+	<build>
+		
+        <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<useIncrementalCompilation>true</useIncrementalCompilation>
+					<warSourceExcludes>src/main/resources/**</warSourceExcludes>
+				</configuration>
+			</plugin>
+			<plugin>
+		    	<groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-war-plugin</artifactId>
+			    <configuration>
+			        <warName>tinydemo</warName>
+			    </configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+
+		<dependency>
+			<groupId>cn.sunline.tiny</groupId>
+			<artifactId>tiny-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>cn.sunline.tiny</groupId>
+			<artifactId>tiny-boot-starter-jdbc</artifactId>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        
+        
+        <dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>druid</artifactId>
+		    <version>1.1.0</version>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+		</dependency>
+		
+		<dependency>  
+            <groupId>org.springframework.boot</groupId>  
+            <artifactId>spring-boot-starter-aop</artifactId>  
+        </dependency>  
+        
+		<dependency>
+		    <groupId>com.google.protobuf</groupId>
+		    <artifactId>protobuf-java</artifactId>
+		    <version>3.5.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.googlecode.protobuf-java-format</groupId>
+			<artifactId>protobuf-java-format</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>cn.sunline.tiny</groupId>
+			<artifactId>tiny-boot-starter-template</artifactId>
+	</dependency>
+
+	</dependencies>
+
+	
+</project>
+

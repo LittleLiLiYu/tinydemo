@@ -1,0 +1,13 @@
+<flows>
+	<flow id="1" name="script" in="true">
+			log.info("start...");
+			log.info("start...22222");
+			return 100;
+	</flow>
+
+	<flow id="100" name="view" >
+			{				"code":0000,
+				"msg":"测试用户重复登录"			}
+	</flow>
+	
+</flows>

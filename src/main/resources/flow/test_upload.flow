@@ -1,0 +1,34 @@
+<flows>
+	<flow id="1" name="script" in="true">
+		//可以设置上传路径
+		pri.uploadPath = "E://file/";
+		return 2;
+	</flow>
+
+	// fileUpload 为 tinyWebFrame的组件
+	<flow id="2" name="fileUpload" succ="10" fail="999">
+		<p name="uploadPath" value="pri.uploadPath" def="upfilename" />
+	</flow>
+
+
+	<flow id="10" name="script">
+		if(pri.upfilename==null){			return 999;		}
+		var filename = eval("("+pri.upfilename+")");//转成json对象
+		log.debug(filename);
+		pri.filename=filename;
+		return 100;
+	</flow>
+
+	<flow id="100" name="view" fail="999" desc="异常视图">
+		{			fileName: pri.filename,
+			code:'0000',
+			msg:'success'
+		}
+	</flow>
+
+
+ 	<flow id="999" name="view">
+ 		{code:'2222',msg:'error'}
+ 	</flow>
+
+</flows>

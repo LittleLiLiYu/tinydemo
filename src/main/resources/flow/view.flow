@@ -1,0 +1,68 @@
+<flows>
+	/*
+		view的几张实现方式
+	*/
+	<flow id="1" name="script" in="true">
+		pri.a="1234";
+		log.info("start...."+pri.a);
+		return 10;
+	</flow>
+			
+	<flow id="10" name="view">
+		{
+			"code":"000"+pri.a,
+			"msg":"成功"
+		}
+	</flow>
+	
+	<flow id="redirect" name="script" in="true">
+		log.info("start...");
+		return redirect_2;
+	</flow>
+	
+	<flow id="redirect_2" name="view">
+		<p value="redirect:view.tml?flow=redirect_3"/>
+	</flow>
+	
+	<flow id="redirect_3" name="view" in="true">
+	{
+		"code":"0000",
+		"msg":"我是重定向过来的"
+	}
+	</flow>
+
+	
+	<flow id="list" name="script" in="true">
+		log.info("start...");
+		pri.list=[
+				{index:1,name:'java'},
+				{index:2,name:'cpp'},
+				{index:3,name:'python'},
+				{index:4,name:'go'}
+		];
+		return list_2;
+	</flow>
+	
+	<flow id="list_2" name="view" type="pri.list:JSONArray">
+		var jsons = {};
+	    jsons.rows=[];
+	    pri.list.forEach(function(o){   
+	    	jsons.rows.push(o);
+		});  
+		return jsons;	
+	</flow>
+	
+	
+	<flow id="100" name="script" in="true">
+		pri.view = "pri.view=?";
+	</flow>
+	
+	
+	<flow id="1000" name="view" in="true">
+		<p value="view" />
+	</flow>
+	
+	<flow id="1100" name="view" in="true">
+		<p value="upload" />
+	</flow>
+</flows>

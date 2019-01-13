@@ -1,0 +1,27 @@
+<flows>
+	/* 
+	   测试protobuf
+	   {"identity":1}
+	*/
+	<flow id="1" name="script"  in="true">
+		log.debug("start.....111");
+		log.debug("protobuf package:" + pri.jsonsObj.identity);
+		log.debug("protobuf package:" + pri.jsonsObj.name);
+		log.debug("protobuf package:" + pri.jsonsObj.age);
+		log.debug("protobuf package:" + pri.jsonsObj.address);
+		return 10;
+	</flow>
+	
+
+	<flow id="10" name="script">
+	
+	   pri.view = {
+			"id" : pri.jsonsObj.identity,
+			"name" : pri.jsonsObj.name,
+			"age": pri.jsonsObj.age,
+			"address" : pri.jsonsObj.address
+		};
+	</flow>
+	
+	
+</flows>

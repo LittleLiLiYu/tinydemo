@@ -1,0 +1,33 @@
+<flows>
+	<flow id="1" name="script" in="true">
+			log.info("start...");
+			
+			log.debug( "check.isNum:"+check.isNum("100"));
+			log.debug( "check.isNull:"+check.isNull("h"));
+			
+			
+			pub.code=1;
+			pub.cc = "2";
+			log.debug(pub.code);
+			log.debug(pub);
+			pub.code = null;
+			//pub.removeParam("code");
+			log.debug(pub);
+			if(pub.code == null){				log.debug("111:"+pub.code);
+						}else{				log.debug("222:"+pub.code);
+						}
+			
+			
+			return 100;
+	</flow>
+
+			
+	<flow id="100" name="view">
+	{		"msg":"展示check对象的使用"
+		,"check.isNum":"是否数字"
+		,"check.isNull":"是否为null"
+		
+	}
+	</flow>
+	
+</flows>

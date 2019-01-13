@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "file.proto";
+
+package proto;
+option java_package = "cn.sunline.proto";
+
+message PersonRequest {
+    int32 identity = 1;
+    string name = 2;
+    int32 age = 3;
+    string address = 4;
+    file head = 5;
+}
+
+message PersonResponse {
+    string status = 1;
+    string msg = 2;
+}

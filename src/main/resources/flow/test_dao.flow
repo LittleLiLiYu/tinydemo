@@ -1,0 +1,28 @@
+<flows>
+	/* 
+	   dao的使用,数据库操作
+	   一般建议采用db.js实现类的方式操作数据库,参考 test_jsdao.flow
+	*/
+	<flow id="1" name="script" in="true">
+	
+		pri.name = "yu";
+		//queryList查询列表数据
+		pri.list = dao.queryList("select name,age from user");
+		log.info("list:"+pri.list);
+		log.info("list size:"+pri.list.size());
+		
+		if(pri.list.size()==0){			pri.view="无数据";		}else{			return 10;		}
+		
+	</flow>
+
+	<flow id="10" name="script">
+		var jsons = {};
+	    jsons.rows=[];
+	    pri.list.forEach(function(o){   	    		log.debug(o);
+	    	 	jsons.rows.push({name:o.name,age:o.age});
+		});  
+		pri.view = JSON.stringify(jsons);
+	</flow>
+	
+	
+</flows>

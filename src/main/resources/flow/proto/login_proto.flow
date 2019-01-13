@@ -1,0 +1,21 @@
+<flows>
+	<flow id="1" name="script"  in="true" desc="测试protobuf">
+		log.debug("start.....111");
+		log.debug("protobuf package:" + pri.jsonsObj.name);
+		log.debug("protobuf package:" + pri.jsonsObj.age);
+		return 10;
+	</flow>
+
+	<flow id="10" name="script">
+	
+	    pri.view = {
+			"status" : "0000",
+			"msg":"succ"
+		};
+	</flow>
+	
+	
+	
+	
+	
+</flows>

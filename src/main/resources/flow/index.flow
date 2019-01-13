@@ -1,0 +1,18 @@
+<flows>
+	<flow id="1" name="script" desc="" in="true" type="data.num:int">
+			log.info("start...12345");
+			log.info("start...11111");
+			log.info("start...22222");
+			pri.jsonsObj = {"data":{}};
+			var data = pri.jsonsObj;
+			data.num = 1;
+			var num = data.num;
+			if( num == 1){							}
+			return 100;
+	</flow>
+			
+	<flow id="100" name="templateView">
+		<p value="index"/>
+	</flow>
+	
+</flows>

@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tiny Information Management Platform</title>
+
+<script type="text/javascript"
+	src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+$(function(){
+
+                var obj={
+                        "type":"SysParameter"
+                };
+
+                $.ajax({
+                        url:"http://127.0.0.1:8000/tiny_check_jsons.tml",
+                        type:"POST",
+                        contentType: "application/json",
+                        data:"{\"type\":\"SysParameter\",\"mobile\":13333}",
+                        dataType:"json",
+                        success: function (data) {
+
+                        },
+                        error:function (data) {
+
+                        }
+                });
+
+});
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<flows>
+	/* 
+	  login的演示
+	*/
+	<flow id="1" name="script" in="true">
+	
+		if( check.isNull(pri.name) ){			pri.msg="用户名不可为空";
+			pri.code="4000";			return 998;		}
+		
+		//查询数据库,判断用户名和密码是否正确
+		
+		//如果成功,切记
+		pri.adminId = 10;
+		ct.loginSuccess(pri.adminId);
+		pub.userId=1;
+		
+		return 10;
+		
+	</flow>
+
+	<flow id="10" name="view">
+		{			"code":"00001",
+			"msg":"登录成功"		}
+	</flow>
+	
+	
+	<flow id="998" name="view">
+		{
+			"code":pri.code,
+			"msg":pri.msg
+		}
+	</flow>
+	
+	
+</flows>

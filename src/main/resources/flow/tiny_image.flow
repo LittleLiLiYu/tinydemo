@@ -1,0 +1,14 @@
+<flows>
+	<flow id="1" name="script" in="true">
+		log.debug("图片展示...");	
+		
+		pri.path = config.getValue("local_path")+"/images/ke.png";
+		return 10;
+	</flow>
+	
+	
+	<flow id="10" name="imageShow">
+		<p name="path" value="pri.path"/>
+	</flow>
+	
+</flows>

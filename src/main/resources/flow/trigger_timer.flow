@@ -1,0 +1,10 @@
+<flows>
+	
+	<flow id="1" name="script" desc="定时器例子" in="true">
+	
+		log.info("start timer......");
+		
+	</flow>
+
+	
+</flows>

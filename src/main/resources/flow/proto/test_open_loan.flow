@@ -1,0 +1,26 @@
+<flows>
+	<flow id="1" name="script"  in="true">
+		log.debug("start.....111");
+		log.debug("protobuf package:" + pri.jsonsObj);
+		log.debug("protobuf package:" + pri.jsonsObj.loanAmt);
+		return 10;
+	</flow>
+	
+
+	<flow id="10" name="script">
+	
+	    pri.view = {
+		    "transCode": "poc_open_loan_jsons",
+		    "rcode": "000000",
+		    "rtime": "2018-03-27 17:39:16",
+		    "msg": "Successful request",
+		    "robj": {
+		        "cust_no": "910000000218"
+		    }
+		}
+	</flow>
+	
+	
+	
+	
+</flows>

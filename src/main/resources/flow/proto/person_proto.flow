@@ -1,0 +1,33 @@
+<flows>
+	/* 
+	   测试protobuf
+	*/
+	<flow id="1" name="script"  in="true" desc="测试protobuf" type="pri.jsonsObj.head:JSONObject">
+		log.debug("start.....111");
+		log.debug("protobuf package:" + pri.jsonsObj.identity);
+		log.debug("protobuf package:" + pri.jsonsObj.name);
+		log.debug("protobuf package:" + pri.jsonsObj.age);
+		log.debug("protobuf package:" + pri.jsonsObj.address);
+		log.debug("protobuf package:" + pri.jsonsObj.head.filename);
+		return 10;
+	</flow>
+	
+	
+	<flow id="10" name="script" type="pri.jsonsObj.head.filename:String|pri.jsonsObj.head.data:byte[]">
+	
+	    // tinyByteToFile.save(ct,pri.jsonsObj.head.filename,pri.jsonsObj.head.data);
+		return 100;
+	</flow>
+
+	<flow id="100" name="script">
+	
+	 	 pri.view = {
+			"status" : "000",
+			"msg" : "success"
+		};
+		
+		
+	</flow>
+	
+	
+</flows>

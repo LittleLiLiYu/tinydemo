@@ -1,0 +1,16 @@
+<flows>
+	<flow id="1" name="script" in="true">
+			log.info("start...");
+			
+			log.debug(pub.random);
+			return 100;
+	</flow>
+	
+	<flow id="100" name="view">
+	{
+		"code":"000",
+		"msg":"展示防篡改"
+	}
+	</flow>
+	
+</flows>

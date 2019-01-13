@@ -1,0 +1,11 @@
+<flows>
+
+	<flow id="1" name="script" in="true">
+
+		log.debug("pri:"+pri);
+		//log.debug(pri.jsonsObj);		
+		
+		pri.view="{\"code\":\"ok\"}";
+	</flow>
+	
+</flows>	

@@ -1,0 +1,11 @@
+<flows>
+	<flow id="1" name="script" in="true">
+	
+	pri.temp_amount=new java.math.BigDecimal("1.34");
+ 		var inputJson = { 			"transRef":"",
+ 			"amount":pri.temp_amount 		};
+ 		
+ 		pri.view = inputJson;
+	</flow>
+
+</flows>

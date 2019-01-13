@@ -1,0 +1,20 @@
+<flows>
+	<flow id="1" name="script" in="true">
+			log.info("start...");
+			return 100;
+	</flow>
+	
+	<flow id="100" name="comp_demo" succ="110">
+		<p name="param1" value="conf.debug" />
+		<p name="param2" value="test..." />
+	</flow>
+
+			
+	<flow id="110" name="view">
+	{
+		"code":"000",
+		"msg":"展示自定义组件的使用"
+	}
+	</flow>
+	
+</flows>

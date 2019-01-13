@@ -1,0 +1,7 @@
+#macro(foot1 $parame1 $parame2 $parame3)
+<span class="footer">
+	<button value="门户" class="ic_home" onclick="goto('$parame1');" />
+	<button value="手机银行" class="ic_mb" onclick="goto('$parame2');" />
+	<button value="客户服务" class="ic_service" onclick="goto('$parame3');" />
+</span>
+#end

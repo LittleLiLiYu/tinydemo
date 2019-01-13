@@ -1,0 +1,17 @@
+syntax = "proto3";
+package proto;  
+  
+option java_package = "cn.sunline.proto";
+
+message openloanResp {
+      string transCode = 1;
+      string rcode = 2;
+      string rtime = 3;
+      string msg = 4;
+ 
+     message Robj {
+          string custNo = 1;
+     }
+     
+      Robj robj = 5;
+}
